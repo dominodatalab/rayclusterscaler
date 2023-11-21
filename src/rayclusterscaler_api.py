@@ -5,7 +5,7 @@ This module implements a functions/endpoints for rayscaler_api api.
 Example:
     List raycluster(GET) : /raycluster/list
     Get raycluster(GET) : /raycluster/<name>
-    Patch raycluster(POST) : /raycluster/<name>
+    Scale raycluster(POST) : /raycluster/scale
 
 
 """
