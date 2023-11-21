@@ -124,4 +124,17 @@ Lastly, the `spec.worker.replicas` attribute in the above example should be equa
 > Also make sure you review the Ray Cluster UI to verify that every worker has joined the cluster before launching the
 > job. The `RayCluster` CRD will indicate running pods. Only the Ray Cluster UI (or API) will confirm that the workers
 > have joined the cluster
-> 
+
+
+***WARNING/ALERT***
+
+Remember to scale down the ray cluster when you have finished. Note that the value for
+`minReplicas` does not permit the cluster to scale down on its own.
+
+Remember to call the  POST endpoint `/raycluster/scale` with the following payload 
+   ```json
+    {
+        "cluster_name":"ray-....",
+        "replicas" : 1
+    }
+   ```
