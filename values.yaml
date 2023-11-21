@@ -1,0 +1,15 @@
+image:
+  repository: quay.io/domino
+  container: rayclusterscaler
+  appVersion: v1.0.0-release
+  pullPolicy: Always
+
+env:
+  name: rayclusterscaler
+  service: rayclusterscaler-svc
+  namespace:
+    field: domino-field
+    compute: domino-compute
+istio:
+  enabled: false
+
